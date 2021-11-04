@@ -1,0 +1,7 @@
+.row {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include size(100%);
+    @include flex-wrap(wrap);
+    @include margin(0, -15px, 15px, -15px);
+}

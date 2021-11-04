@@ -1,0 +1,5 @@
+.select {
+    @include relative();
+    @include size(100%);
+    padding: 5px;
+}

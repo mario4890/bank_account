@@ -1,0 +1,49 @@
+.table {
+    &__container {
+
+    }
+
+    &__row {
+        @include flexbox;
+        @include align-items(center);
+        @include padding(4px, 0, 4px, 0) ;
+    }
+
+    &__col {
+        flex: 1;
+
+        &--right {
+            @extend .table__col;
+
+            flex: 2;
+        }
+
+        &--left {
+            @extend .table__col;
+            @include padding(0, 8px, 0, 8px);
+            text-align: right;
+        }
+
+        input {
+            @include size(100%);
+            @include padding(8px, 8px, 8px, 8px);
+        }
+    }
+
+    &__footer {
+        @include flexbox;
+    }
+
+    &__buttons {
+        &--left {
+            flex: 1;
+        }
+
+        &--right {
+            @include flexbox;
+            @include justify-content(flex-end);
+
+            flex: 1;
+        }
+    }
+}

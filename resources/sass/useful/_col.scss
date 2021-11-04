@@ -1,0 +1,6 @@
+.col {
+    @include size(100%);
+    @include padding(0, 15px, 0, 15px);
+    flex: 1;
+
+}

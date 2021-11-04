@@ -1,0 +1,16 @@
+.body {
+    @include margin(0, 0, 0, 0);
+    @include padding(0, 0, 0, 0);
+    @include bg($gray);
+
+    &__container {
+        @include flexbox();
+        @include flex-direction(column);
+        @include margin(90px, auto, 0, auto);
+        @include padding($top: 20px);
+        @include size(100%);
+        @include bg($white);
+
+        max-width: 1100px;
+    }
+}

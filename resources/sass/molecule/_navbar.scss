@@ -1,0 +1,22 @@
+.navbar {
+    @include fixed(top 0 left 0);
+    @include size(100%);
+
+    &__container {
+        @include flexbox();
+        @include padding(16px, 16px, 16px, 16px);
+        @include bg($white);
+
+        -webkit-box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.3);
+        box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.3);
+
+        h1 {
+            margin: unset;
+            padding: unset;
+        }
+
+        div {
+            flex: 1;
+        }
+    }
+}

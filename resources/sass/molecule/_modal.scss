@@ -1,0 +1,38 @@
+.modal {
+    @include fixed(top 0 left 0);
+    @include size(100%, 100vh);
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    background: rgba($black, .3);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__container {
+        @include size(400px);
+        background: $white;
+        border-radius: 5px;
+    }
+
+    &__header {
+        @include padding(8px, 8px, 8px, 8px);
+        border-bottom: 1px solid $black;
+    }
+
+    &__content {
+        @include padding(8px, 8px, 8px, 8px);
+    }
+
+    &__footer {
+        @include flexbox;
+        @include justify-content(center);
+        @include padding(8px, 8px, 8px, 8px);
+    }
+}

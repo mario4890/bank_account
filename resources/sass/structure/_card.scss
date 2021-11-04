@@ -1,0 +1,8 @@
+.card {
+    &__container {
+        @include flexbox();
+        @include flex-direction(column);
+        @include padding(16px, 16px, 16px, 16px);
+
+    }
+}

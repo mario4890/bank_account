@@ -1,0 +1,7 @@
+.app {
+    &__container {
+        @include size(100%, 100vh);
+        @include flexbox();
+        @include flex-direction(column);
+    }
+}

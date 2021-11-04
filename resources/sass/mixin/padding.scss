@@ -1,0 +1,10 @@
+//Padding mixin
+@mixin padding($top: unset, $right: unset, $bottom: unset, $left: unset) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+}
+
+// example
+// @include padding(1px, null, 3px, 4px);

@@ -17,6 +17,7 @@ class CreateWalletsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->decimal('amount', 15, 2)->default(0.00);
+            $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
     }

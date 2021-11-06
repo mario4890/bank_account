@@ -4,6 +4,10 @@
     margin: 5px;
     z-index: 0;
 
+    span {
+        @include font(15px, $white, 600);
+    }
+
     &--red {
         @extend .button;
         background: $red;

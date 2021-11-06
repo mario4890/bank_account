@@ -2,7 +2,33 @@
     &__container {
         @include flexbox();
         @include flex-direction(column);
+        //@include padding(16px, 16px, 16px, 16px);
+    }
+
+    &__header {
+        @include padding(16px, 16px, 16px, 16px);
+        @include bg($black);
+        @include font($color: $white);
+        border-bottom: 1px solid $black;
+
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    &__content {
+        @include padding(16px, 16px, 16px, 16px);
+    }
+
+    &__footer {
+        @include flexbox();
         @include padding(16px, 16px, 16px, 16px);
 
+
+        &--right {
+            @extend .card__footer;
+            @include justify-content(flex-end);
+        }
     }
 }

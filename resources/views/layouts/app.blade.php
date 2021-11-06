@@ -27,11 +27,6 @@
                 </div>
             </div>
             <div class="menu">
-                <div class="menu__container">
-                    <ul>
-                        <li onclick="options.switchModal(event)">Wallet</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>

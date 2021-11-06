@@ -65,4 +65,18 @@ class Wallet extends Model
 
         return $this;
     }
+
+    public function addAmount(float $amount) {
+        $this->amount += $amount;
+        $this->save();
+
+        return $this;
+    }
+
+    public function subtractAmount(float $amount) {
+        $this->amount -= $amount;
+        $this->save();
+
+        return $this;
+    }
 }

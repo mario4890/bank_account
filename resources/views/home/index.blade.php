@@ -21,7 +21,10 @@
                             <div class="table__row">
                                 <div class="table__col">{{ $wallet->name }}</div>
                                 <div class="table__col">{{ $wallet->amount }}</div>
-                                <div class="table__col"><button class="button--red" data-walletID="{{ $wallet->id }}">Edit</button></div>
+                                <div class="table__col">
+                                    <button class="button--red" onclick="wallet.addAmount({{ $wallet->id }})"><span>Add amount</span></button>
+                                    <button class="button--red" onclick="wallet.subtractAmount({{ $wallet->id }})"><span>Subtract amount</span></button>
+                                </div>
                             </div>
                             @endforeach
                         </div>

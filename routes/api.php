@@ -20,4 +20,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('wallets')->group(function () {
     Route::get('/', [\App\Http\Controllers\Api\Wallet\GetController::class, 'all']);
+
+    Route::prefix('amount')->group(function () {
+        Route::put('/add', [\App\Http\Controllers\Api\Wallet\AmountController::class, 'add']);
+        Route::put('/subtract', [\App\Http\Controllers\Api\Wallet\AmountController::class, 'subtract']);
+    });
 });

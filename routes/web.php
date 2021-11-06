@@ -13,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Home\IndexController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\Home\IndexController::class, 'index'])->name('home');
+
+Route::prefix('amount')->group(function () {
+    Route::post('/add', [\App\Http\Controllers\Wallet\AmountController::class, 'add'])->name('addAmount');
+    Route::post('/subtract', [\App\Http\Controllers\Wallet\AmountController::class, 'subtract'])->name('subtractAmount');
+});

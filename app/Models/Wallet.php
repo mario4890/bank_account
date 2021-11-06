@@ -66,15 +66,27 @@ class Wallet extends Model
         return $this;
     }
 
-    public function addAmount(float $amount) {
+    public function addAmount(float $amount): Wallet
+    {
         $this->amount += $amount;
         $this->save();
 
         return $this;
     }
 
-    public function subtractAmount(float $amount) {
+    public function subtractAmount(float $amount): Wallet
+    {
         $this->amount -= $amount;
+        $this->save();
+
+        return $this;
+    }
+
+    public function newEntity(string $name, float $amount): Wallet
+    {
+        $this->setName($name);
+        $this->setAmount($amount);
+        $this->setActive(1);
         $this->save();
 
         return $this;

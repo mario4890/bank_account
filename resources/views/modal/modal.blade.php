@@ -14,7 +14,7 @@
                                     Amount:
                                 </div>
                                 <div class="table__col">
-                                    <input type="text" value="" name="amount" pattern="[0-9]+([\.][0-9]+)?" step="0.01" title="The number input must start with a number and use either a dot as a decimal character." >
+                                    <input type="text" value="" name="amount" pattern="[0-9]+([\.][0-9]+)?" step="0.01" title="The number input must start with a number and use either a dot as a decimal character." required>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,41 @@
                                 Amount:
                             </div>
                             <div class="table__col">
-                                <input type="text" value="" name="amount" pattern="[0-9]+([\.][0-9]+)?" step="0.01" title="The number input must start with a number and use either a dot as a decimal character.">
+                                <input type="text" value="" name="amount" pattern="[0-9]+([\.][0-9]+)?" step="0.01" title="The number input must start with a number and use either a dot as a decimal character." required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="button--red" onclick="wallet.close(event)"><span>Close</span></button>
+                <button class="button--green"><span>Save</span></button>
+            </div>
+        </form>
+    </div>
+    <div class="modal__container js-container js-modalAddWallet">
+        <form action="{{ route('addWallet') }}" method="POST">
+            @csrf
+            <div class="modal__header">
+                Add wallet
+            </div>
+            <div class="modal__content">
+                <div class="table">
+                    <div class="table__container">
+                        <div class="table__row">
+                            <div class="table__col">
+                                Name:
+                            </div>
+                            <div class="table__col">
+                                <input type="text" value="" name="name" required>
+                            </div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__col">
+                                Amount:
+                            </div>
+                            <div class="table__col">
+                                <input type="text" value="0.00" name="amount" pattern="[0-9]+([\.][0-9]+)?" step="0.01" title="The number input must start with a number and use either a dot as a decimal character." required>
                             </div>
                         </div>
                     </div>

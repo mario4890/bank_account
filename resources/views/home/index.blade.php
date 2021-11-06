@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="card__footer--right">
-                <button class="button--green"><span>Add wallet</span></button>
+                <button class="button--green" onclick="wallet.addWallet()"><span>Add wallet</span></button>
             </div>
         </div>
     </div>

@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('wallets')->group(function () {
     Route::get('/', [\App\Http\Controllers\Api\Wallet\GetController::class, 'all']);
+    Route::post('/add', [\App\Http\Controllers\Api\Wallet\AddController::class, 'add']);
 
     Route::prefix('amount')->group(function () {
         Route::put('/add', [\App\Http\Controllers\Api\Wallet\AmountController::class, 'add']);

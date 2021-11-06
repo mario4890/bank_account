@@ -3,6 +3,14 @@ export default class Wallet {
         // alert('test')
     }
 
+    addWallet(walletID) {
+        let wallet = document.querySelector('.js-modalAddWallet');
+        let modal = wallet.closest('.modal');
+
+        wallet.classList.add('active')
+        modal.classList.add('active')
+    }
+
     addAmount(walletID) {
         let addAmount = document.querySelector('.js-modalAddAmount');
         let modal = addAmount.closest('.modal');
@@ -27,7 +35,9 @@ export default class Wallet {
         e.preventDefault();
         let container = document.querySelector('.js-container.active');
         let modal = container.closest('.modal');
-        container.querySelector('input[name=walletID]').value = '';
+        if(container.querySelector('input[name=walletID]')) {
+            container.querySelector('input[name=walletID]').value = '';
+        }
 
         container.classList.remove('active');
         modal.classList.remove('active');

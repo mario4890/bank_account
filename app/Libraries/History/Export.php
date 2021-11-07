@@ -8,7 +8,7 @@ class Export
 {
     public function csv($walletID)
     {
-        $fileName       = 'tasks.csv';
+        $fileName       = 'history.csv';
         $historyObj     = new History();
         $history        = $historyObj->getByWalletID($walletID);
 

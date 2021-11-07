@@ -10,7 +10,6 @@ class IndexController extends Controller
     public function index(Wallet $walletObj)
     {
         $wallets = $walletObj->getAllWallets();
-
         return view('home.index', compact('wallets'));
     }
 }

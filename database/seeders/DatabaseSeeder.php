@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             HistoryActionSeeder::class,
             WalletSeeder::class,
+            HistorySeeder::class,
         ]);
     }
 }

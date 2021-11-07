@@ -9,6 +9,15 @@ class History extends Model
 {
     use HasFactory;
 
+    public function getByWalletID(int $walletID): Object
+    {
+        $sql = $this->with('wallet', 'historyAction')
+            ->where('wallet_id', $walletID)
+            ->get();
+
+        return $sql;
+    }
+
     private function setWalletID(int $walletID): History
     {
         $this->wallet_id = $walletID;
@@ -30,5 +39,15 @@ class History extends Model
         $this->save();
 
         return $this;
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class, 'id', 'wallet_id');
+    }
+
+    public function historyAction()
+    {
+        return $this->hasOne(HistoryAction::class, 'id', 'history_action_id');
     }
 }

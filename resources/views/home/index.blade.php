@@ -11,6 +11,7 @@
                     <div class="table__container">
                         <div class="table__header">
                             <div class="table__row">
+                                <div class="table__col">ID</div>
                                 <div class="table__col">Name</div>
                                 <div class="table__col">Amount</div>
                                 <div class="table__col"></div>
@@ -19,6 +20,7 @@
                         <div class="table__content">
                             @foreach($wallets as $wallet)
                             <div class="table__row">
+                                <div class="table__col">{{ $wallet->id }}</div>
                                 <div class="table__col">{{ $wallet->name }}</div>
                                 <div class="table__col">{{ $wallet->amount }}</div>
                                 <div class="table__col">
